@@ -35,6 +35,7 @@ public class DistanceCalculator {
         }
 
         // Print output
+        //s%\t%.2 etc are used for formatting purposes can explain if asked
         System.out.printf("%s\t%d\t%.2f\t%.1f\t%.2f\n",productName, quantity, price, distance, totalCost);
         System.out.println("Thank you. Come Again!");
     }
