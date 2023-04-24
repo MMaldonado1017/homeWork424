@@ -2,20 +2,20 @@ package lab1;
 
 import java.util.Scanner;
 
-public class DistanceCalculator {
+public class ProductDistanceCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // Print header
-        System.out.println("Product\tQty\tPrice\tMiles\tTotal");
-        System.out.println("------\t---\t-----\t-----\t-----");
+        System.out.println("Product\t\tQty\tPrice\tMiles\tTotal");
+        System.out.println("-------\t\t---\t-----\t-----\t-----");
 
         // Ask for input
         System.out.print("Enter product name: ");
         String productName = scanner.nextLine();
         System.out.print("Enter quantity: ");
         int quantity = scanner.nextInt();
-        System.out.print("Enter price: ");
+        System.out.print("Enter price per unit: ");
         double price = scanner.nextDouble();
         System.out.print("Enter distance in miles: ");
         double distance = scanner.nextDouble();
@@ -35,8 +35,9 @@ public class DistanceCalculator {
         }
 
         // Print output
-        //s%\t%.2 etc are used for formatting purposes can explain if asked
-        System.out.printf("%s\t%d\t%.2f\t%.1f\t%.2f\n",productName, quantity, price, distance, totalCost);
+        //"%-12s\t%d\t%.2f\t%.1f\t%.2f\n", were used to format
+        System.out.printf("%-12s\t%d\t%.2f\t%.1f\t%.2f\n", productName, quantity, price, distance, totalCost);
+        System.out.println("-------------------------------------------------");
         System.out.println("Thank you. Come Again!");
     }
 }
